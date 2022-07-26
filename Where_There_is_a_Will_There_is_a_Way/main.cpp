@@ -27,6 +27,36 @@ GLfloat speed = 0.08f,skyspeed=0.03f,crowspeed = 0.1f;
 
 
 
+
+
+
+
+
+
+
+
+/// Update will be called in each loop so that the position of each and every object can be refreshed and projected
+void update(int value) {
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 void reshape(int w, int h)
 {
     std::cout<<"Reshape is called"<<std::endl;
