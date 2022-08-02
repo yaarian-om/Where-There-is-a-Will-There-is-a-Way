@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1658726484 source:c:\users\asus\desktop\where-there-is-a-will-there-is-a-way\where_there_is_a_will_there_is_a_way\main.cpp
+1659414698 source:c:\users\asus\desktop\where-there-is-a-will-there-is-a-way\where_there_is_a_will_there_is_a_way\main.cpp
 	<windows.h>
 	<GL/gl.h>
 	<GL/glu.h>
@@ -8,7 +8,6 @@
 	<iostream>
 	<math.h>
 	<MMSystem.h>
-	<iostream>
 
 1301111162 c:\program files (x86)\codeblocks\mingw\include\windows.h
 	<winresrc.h>

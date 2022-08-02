@@ -1,0 +1,28 @@
+
+            glBegin(GL_TRIANGLE_FAN);
+            glColor3ub(0,0,0);
+            glVertex2f(-0.351f, -0.473f);
+            glVertex2f(-0.429f, -0.473f);
+            glVertex2f(-0.351f, -0.303f);
+            glVertex2f(-0.409f, -0.295f);
+            glVertex2f(-0.211f, 0.045f);
+            glVertex2f(0.000f, -0.276f);
+            glVertex2f(-0.076f, -0.276f);
+            glVertex2f(0.022f, -0.45f);
+            glVertex2f(-0.067f, -0.45f);
+            glVertex2f(0.067f, -0.691f);
+            glVertex2f(-0.265f, -0.703f);
+            glVertex2f(-0.260f, -0.703f);
+            glVertex2f(-0.476f, -0.703f);
+            glEnd();
+            glBegin(GL_TRIANGLE_FAN);
+            glColor3ub(64,0,0);
+            glVertex2f(-0.162f, -0.801f);
+            glVertex2f(-0.160f, -0.801f);
+            glVertex2f(-0.160f, -0.813f);
+            glVertex2f(-0.158f, -0.809f);
+            glVertex2f(-0.262f, -0.801f);
+            glVertex2f(-0.258f, -0.706f);
+            glVertex2f(-0.158f, -0.699f);
+            glVertex2f(-0.156f, -0.797f);
+            glEnd();
