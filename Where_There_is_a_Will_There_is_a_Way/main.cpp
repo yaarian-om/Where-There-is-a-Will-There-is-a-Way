@@ -748,6 +748,13 @@ void background()
 	glEnd();
 }
 
+void background2()
+{
+
+
+}
+
+
 void sky1()
 {
     // glLoadIdentity();
@@ -1313,7 +1320,7 @@ void Display2()
 
 void Display1()
 {
-    glClearColor(1.0f, 1.0f, 1.0f, 1.0f); // Set background color to black and opaque
+    glClearColor(1.0f, 1.0f, 1.0f, 1.0f); /// Set background color to black and opaque
     glClear(GL_COLOR_BUFFER_BIT);
     glBegin(GL_POLYGON);
     glColor3ub(124, 252, 0);
@@ -1325,6 +1332,9 @@ void Display1()
 
     fullsky();
     grass();
+    glTranslatef(0.1,0.0,0.0);
+    background();
+    glTranslatef(0.6,0.0,0.0);
     background();
     sky1();
     sky2();
