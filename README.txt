@@ -15,3 +15,11 @@ Just Follow the codes as written below depends on the current situation you have
 	|- git add .
 	|- git commit -m "Some message about updates"
 	|- git push --set-upstream origin new_Branch_Name_Here
+
+
+
+##################################################################################################
+****************************************  UPDATES  ***********************************************
+##################################################################################################
+sky1 == cloud1
+sky2 == cloud2
