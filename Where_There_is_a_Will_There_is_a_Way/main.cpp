@@ -1,4 +1,15 @@
+/**
 
+                        TEAM KAUWA
+
+    1. KAMRUZZAMAN UZZAL    ==>>      20-42860-1
+    2. SUDIPTA KUMAR DAS    ==>>      20-43658-2
+    3. SIKANDAR, SIFAT      ==>>      20-43143-1
+    4. AKHI, MEHERUN NESA   ==>>      20-43136-1
+
+*/
+
+/// HEADERFILES
 #include <windows.h>
 #include <GL/gl.h>
 #include <GL/glu.h>
@@ -10,10 +21,11 @@
 
 # define PI 3.14159265358979323846
 
-
+// ***************************************** REFERENCES **********************************************************
 /// Animation-Source : Transform  ==>> https://www.youtube.com/watch?v=CR5SW3gmxPE
+/// ROTATION-FUNCTION ==>> https://www.gatevidyalay.com/2d-rotation-in-computer-graphics-definition-examples/
 /// Grid For drawing Objects ==>> https://virtual-graph-paper.com/
-
+// ****************************************************************************************************************
 
 
 void Display(void); /// Just declaring Display
@@ -23,14 +35,16 @@ void Display1(); /// Just declaring Display1
 
 /// Position Vertices
 GLfloat position = -1.2f,position2 = 0.0f,skypos=-1.2f,xpos=-1.0f,ypos=0.45f,yuppos,ydown;
+/// SPEED DECLARATION
 GLfloat speed = 0.08f,skyspeed=0.03f,crowspeed = 0.1f;
 
-
+// ********************************  VARIABLES  *******************************************************************
 int donef = 0,dtwof = 0,dthreef = 0,dfourf = 0,dfivef = 0,dsixf = 0,dsevenf = 0,
 waterflag = 0,ideaflag = 0,ideamusic = 0,febbleflag = 0,stonereturnflag = 0,
 deightf = 0,flyaway = 0,drankwater = 0,happilygone = 0;
 
-void update(int value) {
+void update(int value) /// UPDATE WILL BE CALLED IN EVERY FRAME SO THAT IT CAN SET NEW POSITION
+{
 
     if(position > 1.3)
     {
@@ -59,7 +73,7 @@ void update(int value) {
 	glutTimerFunc(100, update, 0);
 }
 
-void StartingText()
+void StartingText() /// STARTING WHITE PAGE TEXT
 {
     char text[120];
     sprintf(text, "WHERE THERE IS A WILL  THERE'S A WAY",5.00,8.00);
@@ -219,7 +233,7 @@ void sun()
 	GLfloat twicePi = 2.0f * PI;
 
 	glBegin(GL_TRIANGLE_FAN);
-	    glColor3ub(254, 238, 194);
+	    glColor3ub(254, 177, 57); /// SUN COLOR
 		glVertex2f(k, l); // center of circle
 		for(int i = 0; i <= triangleAmount;i++) {
 			glVertex2f(
@@ -230,7 +244,7 @@ void sun()
 	glEnd();
 }
 
-void Moving_Stone()
+void Moving_Stone() /// STONE ANIMATION
 {
     int triangleAmount = 20;
     GLfloat radius =.02f;
@@ -255,19 +269,19 @@ void Bird()
 
 
             glBegin(GL_LINES);
-            glColor3ub(0,0,0);
+            glColor3ub(0,0,0); /// Color
                 glVertex2f(-0.487f, 0.055f);
                 glVertex2f(-0.487f, 0.055f);
             glEnd();
 
             glBegin(GL_LINES);
-            glColor3ub(0,0,0);
+            glColor3ub(0,0,0); /// Color
                 glVertex2f(-0.487f, 0.051f);
                 glVertex2f(-0.487f, 0.051f);
             glEnd();
 
             glBegin(GL_TRIANGLE_FAN);
-            glColor3ub(0,0,0);
+            glColor3ub(0,0,0); /// Color
             glVertex2f(-0.583f, -0.113f);
             glVertex2f(-0.599f, -0.133f);
             glVertex2f(-0.608f, -0.121f);
@@ -562,7 +576,7 @@ void Bird()
             glVertex2f(-0.594f, -0.125f);
             glEnd();
             glBegin(GL_TRIANGLE_FAN);
-            glColor3ub(201,168,56);
+            glColor3ub(201,168,56); /// Color
             glVertex2f(-0.770f, -0.188f);
             glVertex2f(-0.761f, -0.184f);
             glVertex2f(-0.752f, -0.176f);
@@ -630,7 +644,7 @@ void Bird()
             glVertex2f(-0.788f, -0.192f);
             glEnd();
             glBegin(GL_TRIANGLE_FAN);
-            glColor3ub(201,168,56);
+            glColor3ub(201,168,56); /// Color
             glVertex2f(-0.723f, -0.141f);
             glVertex2f(-0.717f, -0.137f);
             glVertex2f(-0.712f, -0.16f);
@@ -638,7 +652,7 @@ void Bird()
             glVertex2f(-0.730f, -0.141f);
             glEnd();
             glBegin(GL_TRIANGLE_FAN);
-            glColor3ub(193,64,122);
+            glColor3ub(193,64,122); /// Color
             glVertex2f(-0.781f, -0.192f);
             glVertex2f(-0.794f, -0.192f);
             glVertex2f(-0.803f, -0.196f);
@@ -656,7 +670,7 @@ void Bird()
             glVertex2f(-0.766f, -0.188f);
             glEnd();
             glBegin(GL_TRIANGLE_FAN);
-            glColor3ub(255,255,255);
+            glColor3ub(255,255,255); /// Color
             glVertex2f(-0.725f, 0.052f);
             glVertex2f(-0.740f, 0.017f);
             glVertex2f(-0.749f, 0.001f);
@@ -672,7 +686,7 @@ void Bird()
             glVertex2f(-0.716f, 0.068f);
             glEnd();
             glBegin(GL_TRIANGLE_FAN);
-            glColor3ub(255,255,255);
+            glColor3ub(255,255,255); /// Color
             glVertex2f(-0.716f, 0.025f);
             glVertex2f(-0.698f, 0.056f);
             glVertex2f(-0.693f, 0.056f);
@@ -690,7 +704,7 @@ void Bird()
             glVertex2f(-0.727f, 0.005f);
             glEnd();
             glBegin(GL_TRIANGLE_FAN);
-            glColor3ub(0,0,0);
+            glColor3ub(0,0,0); /// Color
             glVertex2f(-0.758f, 0.041f);
             glVertex2f(-0.751f, 0.056f);
             glVertex2f(-0.745f, 0.06f);
@@ -702,7 +716,7 @@ void Bird()
             glVertex2f(-0.758f, 0.041f);
             glEnd();
             glBegin(GL_TRIANGLE_FAN);
-            glColor3ub(0,0,0);
+            glColor3ub(0,0,0); /// Color
             glVertex2f(-0.709f, 0.009f);
             glVertex2f(-0.705f, 0.021f);
             glVertex2f(-0.693f, 0.005f);
@@ -716,7 +730,7 @@ void Bird()
             glVertex2f(-0.709f, 0.017f);
             glEnd();
             glBegin(GL_TRIANGLE_FAN);
-            glColor3ub(255,255,255);
+            glColor3ub(255,255,255); /// Color
             glVertex2f(-0.751f, 0.045f);
             glVertex2f(-0.747f, 0.048f);
             glVertex2f(-0.749f, 0.048f);
@@ -725,7 +739,7 @@ void Bird()
             glVertex2f(-0.756f, 0.033f);
             glEnd();
             glBegin(GL_TRIANGLE_FAN);
-            glColor3ub(255,255,255);
+            glColor3ub(255,255,255); /// Color
             glVertex2f(-0.713f, 0.001f);
             glVertex2f(-0.707f, 0.005f);
             glVertex2f(-0.707f, 0.005f);
@@ -735,7 +749,7 @@ void Bird()
             glVertex2f(-0.716f, -0.007f);
             glEnd();
             glBegin(GL_TRIANGLE_FAN);
-            glColor3ub(47,47,47);
+            glColor3ub(47,47,47); /// Color
             glVertex2f(-0.591f, -0.141f);
             glVertex2f(-0.598f, -0.165f);
             glVertex2f(-0.598f, -0.185f);
@@ -799,7 +813,7 @@ void Bird()
             glVertex2f(-0.591f, -0.129f);
             glEnd();
             glBegin(GL_TRIANGLE_FAN);
-            glColor3ub(47,47,47);
+            glColor3ub(47,47,47); /// Color
             glVertex2f(-0.469f, -0.019f);
             glVertex2f(-0.471f, -0.027f);
             glVertex2f(-0.465f, -0.007f);
@@ -810,7 +824,7 @@ void Bird()
             glVertex2f(-0.471f, -0.031f);
             glEnd();
             glBegin(GL_TRIANGLE_FAN);
-            glColor3ub(47,47,47);
+            glColor3ub(47,47,47); /// Color
             glVertex2f(-0.445f, -0.027f);
             glVertex2f(-0.447f, -0.031f);
             glVertex2f(-0.440f, -0.015f);
@@ -822,7 +836,7 @@ void Bird()
             glVertex2f(-0.449f, -0.035f);
             glEnd();
             glBegin(GL_TRIANGLE_FAN);
-            glColor3ub(47,47,47);
+            glColor3ub(47,47,47); /// Color
             glVertex2f(-0.431f, -0.074f);
             glVertex2f(-0.425f, -0.066f);
             glVertex2f(-0.413f, -0.062f);
@@ -834,7 +848,7 @@ void Bird()
             glVertex2f(-0.429f, -0.07f);
             glEnd();
             glBegin(GL_TRIANGLE_FAN);
-            glColor3ub(47,47,47);
+            glColor3ub(47,47,47); /// Color
             glVertex2f(-0.436f, -0.129f);
             glVertex2f(-0.422f, -0.125f);
             glVertex2f(-0.418f, -0.141f);
@@ -844,7 +858,7 @@ void Bird()
             glVertex2f(-0.431f, -0.129f);
             glEnd();
             glBegin(GL_TRIANGLE_FAN);
-            glColor3ub(47,47,47);
+            glColor3ub(47,47,47); /// Color
             glVertex2f(-0.456f, -0.173f);
             glVertex2f(-0.462f, -0.169f);
             glVertex2f(-0.453f, -0.181f);
@@ -857,7 +871,7 @@ void Bird()
             glVertex2f(-0.458f, -0.169f);
             glEnd();
             glBegin(GL_TRIANGLE_FAN);
-            glColor3ub(47,47,47);
+            glColor3ub(47,47,47); /// Color
             glVertex2f(-0.627f, 0.167f);
             glVertex2f(-0.640f, 0.222f);
             glVertex2f(-0.647f, 0.254f);
@@ -906,7 +920,7 @@ void Bird()
             glVertex2f(-0.627f, 0.191f);
             glEnd();
             glBegin(GL_TRIANGLE_FAN);
-            glColor3ub(47,47,47);
+            glColor3ub(47,47,47); /// Color
             glVertex2f(-0.585f, 0.128f);
             glVertex2f(-0.589f, 0.151f);
             glVertex2f(-0.596f, 0.124f);
@@ -917,7 +931,7 @@ void Bird()
             glVertex2f(-0.571f, 0.155f);
             glEnd();
             glBegin(GL_TRIANGLE_FAN);
-            glColor3ub(47,47,47);
+            glColor3ub(47,47,47); /// Color
             glVertex2f(-0.605f, 0.128f);
             glVertex2f(-0.607f, 0.128f);
             glVertex2f(-0.611f, 0.104f);
@@ -932,7 +946,7 @@ void fullsky()
 {
      glLoadIdentity();
     glBegin(GL_POLYGON);
-	glColor3ub(155, 215, 232);
+	glColor3ub(155, 215, 232); /// Sky Color
 	glVertex2f(-1.0f, 1.0f);
 	glVertex2f(1.0f, 1.0f);
 	glVertex2f(1.0f, 0.1f);
@@ -944,7 +958,7 @@ void fullsky()
 void road()
 {
     glBegin(GL_POLYGON);
-    glColor3ub(54,15,0);
+    glColor3ub(54,15,0); /// Deep Dark Brown
     glVertex2f(-1.0f,-0.85f);
     glVertex2f(1.0f,-0.7f);
     glVertex2f(1.0f,-1.0);
@@ -962,7 +976,7 @@ void pitcher()
 	GLfloat twicePi = 2.0f * PI;
 
 	glBegin(GL_TRIANGLE_FAN);
-	    glColor3ub(107, 101, 93);
+	    glColor3ub(107, 101, 93); /// Ash Color
 		glVertex2f(k, l); // center of circle
 		for(int i = 0; i <= triangleAmount;i++) {
 			glVertex2f(
@@ -974,7 +988,7 @@ void pitcher()
 
 
 	glBegin(GL_POLYGON);
-	glColor3ub(107, 101, 93);
+	glColor3ub(107, 101, 93); /// Color
 	glVertex2f(0.47f, -0.65f);
 	glVertex2f(0.32f, -0.65f);
 	glVertex2f(0.32f,-0.55f);
@@ -985,7 +999,7 @@ void pitcher()
 
 
     glBegin(GL_POLYGON);
-	glColor3ub(191, 180, 164);
+	glColor3ub(191, 180, 164); /// Color
 	glVertex2f(0.47f, -0.55f);
 	glVertex2f(0.32f, -0.55f);
 	glVertex2f(0.30f,-0.52f);
@@ -1205,7 +1219,7 @@ void waterdrop()
 	glEnd();
 
 	 glBegin(GL_POLYGON);
-	glColor3ub(135,206,250);
+	glColor3ub(135,206,250); /// 1st SMALL WATER DROP BESIDE THE JAR
 	glVertex2f(0.20f, -0.62f);
 	glVertex2f(0.11f, -0.60f);
 	glVertex2f(.08f, -0.57f);
@@ -1218,7 +1232,7 @@ void waterdrop()
 	 glLoadIdentity();
 
     glBegin(GL_POLYGON);
-	glColor3ub(135,206,250);
+	glColor3ub(135,206,250); /// COLOR
 	glVertex2f(0.47f, -0.58f);
 	glVertex2f(0.32f, -0.58f);
 	glVertex2f(0.32f,-0.55f);
@@ -1237,7 +1251,7 @@ void stone()
 	GLfloat twicePi = 2.0f * PI;
 
 	glBegin(GL_TRIANGLE_FAN);
-	    glColor3ub(107, 101, 93);
+	    glColor3ub(107, 101, 93); /// STONE COLOR
 		glVertex2f(k, l); // center of circle
 		for(int i = 0; i <= triangleAmount;i++) {
 			glVertex2f(
@@ -1250,7 +1264,7 @@ void stone()
 	GLfloat m=-.67f; GLfloat n=-.75f;
 
 	glBegin(GL_TRIANGLE_FAN);
-	    glColor3ub(107, 101, 93);
+	    glColor3ub(107, 101, 93); /// STONE COLOR
 		glVertex2f(m, n); // center of circle
 		for(int i = 0; i <= triangleAmount;i++) {
 			glVertex2f(
@@ -1263,7 +1277,7 @@ void stone()
 	GLfloat c=-.67f; GLfloat d=-.67f;
 
 	glBegin(GL_TRIANGLE_FAN);
-	    glColor3ub(107, 101, 93);
+	    glColor3ub(107, 101, 93); /// STONE COLOR
 		glVertex2f(c, d); // center of circle
 		for(int i = 0; i <= triangleAmount;i++) {
 			glVertex2f(
@@ -1276,7 +1290,7 @@ void stone()
 	GLfloat e=-.63f; GLfloat f=-.7f;
 
 	glBegin(GL_TRIANGLE_FAN);
-	    glColor3ub(107, 101, 93);
+	    glColor3ub(107, 101, 93); /// STONE COLOR
 		glVertex2f(e, f); // center of circle
 		for(int i = 0; i <= triangleAmount;i++) {
 			glVertex2f(
@@ -1289,7 +1303,7 @@ void stone()
 	GLfloat x=-.66f; GLfloat y=-.70f;
 
 	glBegin(GL_TRIANGLE_FAN);
-	    glColor3ub(107, 101, 93);
+	    glColor3ub(107, 101, 93); /// STONE COLOR
 		glVertex2f(x, y); // center of circle
 		for(int i = 0; i <= triangleAmount;i++) {
 			glVertex2f(
@@ -1301,11 +1315,10 @@ void stone()
 }
 
 
-
 void grass()
 {
     glBegin(GL_POLYGON);
-	glColor3ub(124, 252, 0);
+	glColor3ub(124, 252, 0); /// GRASS COLOR
 	glVertex2f(-1.0f, 0.1f);
 	glVertex2f(1.0f, .1f);
 	glVertex2f(1.0f, -0.7f);
@@ -1317,7 +1330,7 @@ void grass()
 void background()
 {
     glBegin(GL_POLYGON);
-	glColor3ub(1, 132, 42);
+	glColor3ub(1, 132, 42); /// BACKGROUND COLOR
 	glVertex2f(-1.0f, 0.1f);
 	glVertex2f(-0.95f, .15f);
 	glVertex2f(-.93f, 0.15f);
@@ -1326,7 +1339,7 @@ void background()
 	glEnd();
 
 	glBegin(GL_POLYGON);
-	glColor3ub(1, 132, 42);
+	glColor3ub(1, 132, 42); /// BACKGROUD COLOR
 	glVertex2f(-0.93f, 0.1f);
 	glVertex2f(-0.83f, .25f);
 	glVertex2f(-.79f, 0.255f);
@@ -1336,7 +1349,7 @@ void background()
 	glEnd();
 
 	glBegin(GL_POLYGON);
-	glColor3ub(1, 132, 42);
+	glColor3ub(1, 132, 42); /// BACKGROUND COLOR
 	glVertex2f(-0.73f, 0.1f);
 	glVertex2f(-0.73f, 0.15f);
 	glVertex2f(-0.7f, .20f);
@@ -1347,7 +1360,7 @@ void background()
 	glEnd();
 
 	glBegin(GL_POLYGON);
-	glColor3ub(1, 132, 42);
+	glColor3ub(1, 132, 42); /// BACKGROUND COLOR
 	glVertex2f(-.57f, 0.1f);
 	glVertex2f(-0.52f, .15f);
 	glVertex2f(-.50f, 0.15f);
@@ -1375,7 +1388,7 @@ void background()
 	glEnd();
 
 	glBegin(GL_POLYGON);
-	glColor3ub(1, 132, 42);
+	glColor3ub(1, 132, 42); /// BACKGOROUND COLOR
 	glVertex2f(-0.23f, 0.1f);
 	glVertex2f(-0.23f, 0.15f);
 	glVertex2f(-0.20f, .20f);
@@ -1386,7 +1399,7 @@ void background()
 	glEnd();
 
 	glBegin(GL_POLYGON);
-	glColor3ub(1, 132, 42);
+	glColor3ub(1, 132, 42); /// BACKGROUND COLOR
 	glVertex2f(-0.08f, 0.1f);
 	glVertex2f(.08f, .25f);
 	glVertex2f(.12f, 0.255f);
@@ -1396,7 +1409,7 @@ void background()
 	glEnd();
 
 	glBegin(GL_POLYGON);
-	glColor3ub(1, 132, 42);
+	glColor3ub(1, 132, 42); /// BACKGROUND COLOR
 	glVertex2f(.21f, 0.1f);
 	glVertex2f(0.28f, .15f);
 	glVertex2f(.30f, 0.15f);
@@ -1405,16 +1418,9 @@ void background()
 	glEnd();
 }
 
-void background2()
+
+void cloud1()
 {
-
-
-}
-
-
-void sky1()
-{
-    // glLoadIdentity();
     int i;
 
 	GLfloat x=.5f; GLfloat y=.8f; GLfloat radius =.05f;
@@ -1422,7 +1428,7 @@ void sky1()
 	GLfloat twicePi = 2.0f * PI;
 
 	glBegin(GL_TRIANGLE_FAN);
-	    glColor3ub(255, 255, 255);
+	    glColor3ub(255, 255, 255); /// CLOUD COLOR
 		glVertex2f(x, y); // center of circle
 		for(i = 0; i <= triangleAmount;i++) {
 			glVertex2f(
@@ -1435,7 +1441,7 @@ void sky1()
 	GLfloat a=.55f; GLfloat b=.78f;
 
 	glBegin(GL_TRIANGLE_FAN);
-	    glColor3ub(255, 255, 255);
+	    glColor3ub(255, 255, 255); /// CLOUD COLOR
 		glVertex2f(a, b); // center of circle
 		for(i = 0; i <= triangleAmount;i++) {
 			glVertex2f(
@@ -1448,7 +1454,7 @@ void sky1()
 	GLfloat c=.45f; GLfloat d=.78f;
 
 	glBegin(GL_TRIANGLE_FAN);
-	    glColor3ub(255, 255, 255);
+	    glColor3ub(255, 255, 255); /// CLOUD COLOR
 		glVertex2f(c, d); // center of circle
 		for(i = 0; i <= triangleAmount;i++) {
 			glVertex2f(
@@ -1461,7 +1467,7 @@ void sky1()
 	GLfloat e=.52f; GLfloat f=.75f;
 
 	glBegin(GL_TRIANGLE_FAN);
-	    glColor3ub(255, 255, 255);
+	    glColor3ub(255, 255, 255); /// CLOUD COLOR
 		glVertex2f(e, f); // center of circle
 		for(i = 0; i <= triangleAmount;i++) {
 			glVertex2f(
@@ -1474,7 +1480,7 @@ void sky1()
 	GLfloat g=.6f; GLfloat h=.77f;
 
 	glBegin(GL_TRIANGLE_FAN);
-	    glColor3ub(255, 255, 255);
+	    glColor3ub(255, 255, 255); /// CLOUD COLOR
 		glVertex2f(g, h); // center of circle
 		for(i = 0; i <= triangleAmount;i++) {
 			glVertex2f(
@@ -1485,9 +1491,9 @@ void sky1()
 	glEnd();
 }
 
-void sky2()
+void cloud2()
 {
-   // glLoadIdentity();
+
     int i;
 
 	GLfloat x=-.5f; GLfloat y=.8f; GLfloat radius =.05f;
@@ -1495,7 +1501,7 @@ void sky2()
 	GLfloat twicePi = 2.0f * PI;
 
 	glBegin(GL_TRIANGLE_FAN);
-	    glColor3ub(255, 255, 255);
+	    glColor3ub(255, 255, 255); /// CLOUD COLOR 2
 		glVertex2f(x, y); // center of circle
 		for(i = 0; i <= triangleAmount;i++) {
 			glVertex2f(
@@ -1508,7 +1514,7 @@ void sky2()
 	GLfloat a=-.55f; GLfloat b=.78f;
 
 	glBegin(GL_TRIANGLE_FAN);
-	    glColor3ub(255, 255, 255);
+	    glColor3ub(255, 255, 255); /// CLOUD COLOR 2
 		glVertex2f(a, b); // center of circle
 		for(i = 0; i <= triangleAmount;i++) {
 			glVertex2f(
@@ -1521,7 +1527,7 @@ void sky2()
 	GLfloat c=-.45f; GLfloat d=.78f;
 
 	glBegin(GL_TRIANGLE_FAN);
-	    glColor3ub(255, 255, 255);
+	    glColor3ub(255, 255, 255); /// CLOUD COLOR 2
 		glVertex2f(c, d); // center of circle
 		for(i = 0; i <= triangleAmount;i++) {
 			glVertex2f(
@@ -1534,7 +1540,7 @@ void sky2()
 	GLfloat e=-.52f; GLfloat f=.75f;
 
 	glBegin(GL_TRIANGLE_FAN);
-	    glColor3ub(255, 255, 255);
+	    glColor3ub(255, 255, 255); /// CLOUD COLOR 2
 		glVertex2f(e, f); // center of circle
 		for(i = 0; i <= triangleAmount;i++) {
 			glVertex2f(
@@ -1547,7 +1553,7 @@ void sky2()
 	GLfloat g=-.6f; GLfloat h=.77f;
 
 	glBegin(GL_TRIANGLE_FAN);
-	    glColor3ub(255, 255, 255);
+	    glColor3ub(255, 255, 255); /// CLOUD COLOR 2
 		glVertex2f(g, h); // center of circle
 		for(i = 0; i <= triangleAmount;i++) {
 			glVertex2f(
@@ -1562,7 +1568,7 @@ void Normal_Tree()
 {
 
             glBegin(GL_TRIANGLE_FAN);
-            glColor3ub(20,131,12);
+            glColor3ub(20,131,12); /// NORNMAL TREE COLOR GREEN
             glVertex2f(-0.351f, -0.473f);
             glVertex2f(-0.429f, -0.473f);
             glVertex2f(-0.351f, -0.303f);
@@ -1578,7 +1584,7 @@ void Normal_Tree()
             glVertex2f(-0.476f, -0.703f);
             glEnd();
             glBegin(GL_TRIANGLE_FAN);
-            glColor3ub(64,0,0);
+            glColor3ub(64,0,0); /// NORMAL TREE COLOR BOTTOM PART BROWN
             glVertex2f(-0.162f, -0.801f);
             glVertex2f(-0.160f, -0.801f);
             glVertex2f(-0.160f, -0.813f);
@@ -1591,9 +1597,9 @@ void Normal_Tree()
 }
 
 
-
-void reshape(int w, int h)
+void reshape(int w, int h) /// IT FITS EVERY OBJECTS IN ANY KIND OF SCREEN SIZE
 {
+    /// THIS FUNCTION IS NEEDED TO RESHAPE ALL THE OBJECTS SO THAT IT CAN MATCH WITH THE SCREEN SIZE OF ANY PC
     std::cout<<"Reshape is called"<<std::endl;
     float aspectRatio = (float)w/(float)h;
         glMatrixMode(GL_PROJECTION);
@@ -1604,17 +1610,18 @@ void reshape(int w, int h)
 
 void Display(void)
 {
-    //std::cout<<"Display 1 called"<<std::endl;
+    /// INITIAL DISPLAY
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     glLoadIdentity();
     glTranslatef(0,0,-20);
-    StartingText();
+    StartingText(); /// LEADING STARTING TEXT
     glFlush();
     glutSwapBuffers();
 }
 
 void init(void)
 {
+    /// CUSTOM CONSTRUCTOR THAT WILL BE CALLED IN EVERY PIXEL UPDATE
     glClearColor( 1.0f, 1.0f, 1.0f, 1.0f);
     glClearDepth( 1.0 );
     glEnable(GL_DEPTH_TEST);
@@ -1629,7 +1636,7 @@ void init(void)
 void Display8()
 {
     std::cout<<"Display 8 called"<<std::endl;
-    glClearColor(1.0f, 1.0f, 1.0f, 1.0f); // Set background color to black and opaque
+    glClearColor(1.0f, 1.0f, 1.0f, 1.0f); /// Set background color to black and opaque
     glClear(GL_COLOR_BUFFER_BIT);
 
     road();
@@ -1637,8 +1644,8 @@ void Display8()
     grass();
     background();
     pitcher();
-    sky1();
-    sky2();
+    cloud1();
+    cloud2();
     glTranslatef(0.1f,0.0f,0.0f);
     waterdrop();
     glLoadIdentity();
@@ -1655,7 +1662,7 @@ void Display8()
         {
             glTranslatef(-0.2f,ydown, 0.0f);
             std::cout<<xpos<<" "<<yuppos<<std::endl;
-            glRotatef(180,0,1,0);
+            glRotatef(180,0,1,0); /// IF FLYAWAY IS NAGATIVE THEN ROTATE TO THIS POSITION
             Bird();
     }
     else
@@ -1689,7 +1696,7 @@ void Display8()
 
 void Display7()
 {
-    glClearColor(1.0f, 1.0f, 1.0f, 1.0f); // Set background color to black and opaque
+    glClearColor(1.0f, 1.0f, 1.0f, 1.0f); /// Set background color to black and opaque
     glClear(GL_COLOR_BUFFER_BIT);
 
     road();
@@ -1697,8 +1704,8 @@ void Display7()
     grass();
     background();
     pitcher();
-    sky1();
-    sky2();
+    cloud1();
+    cloud2();
     glLoadIdentity();
     tree();
 
@@ -1751,8 +1758,8 @@ void Display6()
     grass();
     background();
     pitcher();
-    sky1();
-    sky2();
+    cloud1();
+    cloud2();
     glLoadIdentity();
     tree();
     glLoadIdentity();
@@ -1802,8 +1809,8 @@ void Display5()
     grass();
     background();
     pitcher();
-    sky1();
-    sky2();
+    cloud1();
+    cloud2();
     glLoadIdentity();
     tree();
     glLoadIdentity();
@@ -1844,8 +1851,8 @@ void Display4()
     background();
     glPushMatrix();
     glTranslatef(skypos,0.0,0.0);
-    sky1();
-    sky2();
+    cloud1();
+    cloud2();
     glPopMatrix();
 
     glLoadIdentity();
@@ -1896,8 +1903,8 @@ void Display3()
     fullsky();
     grass();
     background();
-    sky1();
-    sky2();
+    cloud1();
+    cloud2();
 
     glLoadIdentity();
     glTranslatef(0.0,0.0,0.0);
@@ -1942,8 +1949,8 @@ void Display2()
     fullsky();
     grass();
     background();
-    sky1();
-    sky2();
+    cloud1();
+    cloud2();
 
     glLoadIdentity();
     glTranslatef(0.0,0.0,0.0);
@@ -1993,8 +2000,8 @@ void Display1()
     background();
     glTranslatef(0.6,0.0,0.0);
     background();
-    sky1();
-    sky2();
+    cloud1();
+    cloud2();
 
     glTranslatef(-0.6,0.0,0.0);
     Normal_Tree();
@@ -2019,7 +2026,10 @@ void Display1()
     }
 }
 
-void handleKeypress(unsigned char key, int x, int y) {
+void handleKeypress(unsigned char key, int x, int y)
+{
+
+
 	switch (key) {
 	    case '1':
 	        std::cout<<"1 Pressed"<<std::endl;
@@ -2081,7 +2091,7 @@ int main(int argc, char** argv)
     glutDisplayFunc(Display);
     glutKeyboardFunc(handleKeypress);
     glutTimerFunc(100, update, 0);
-    glutMainLoop();
+    glutMainLoop(); /// BUILT-IN FUNCTION
     return 0;
 }
 
