@@ -1,0 +1,114 @@
+\documentclass{article}
+\usepackage{color}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{graphics}                       %  For Inserting List of Figures
+\usepackage{index}                          %  For Inserting Index in the document
+\usepackage{url,hyperref}                   %  For Inserting Index in the document
+\usepackage[xindy]{imakeidx}                %  For Inserting Index in Alphabetical order
+%\usepackage{float}                         %  For Preventing Table Repositioning
+\usepackage{float}                          %  For Preventing Table Repositioning
+% \usepackage{geometry}
+\usepackage[super]{nth}                     % This is needed to use SuperScripted 1st 2nd 3rd 4th ...
+% \usepackage[a4paper,showframe]{geometry}    % Change while production %%%% This makes the outline frame of the book
+
+
+\begin{document}
+
+\begin{titlepage}
+    \begin{center}
+
+        \vspace*{\fill}
+        \Huge
+        \textbf{COMPUTER GRAPHICS ASSIGNMENT} \\
+        \vspace*{\fill}
+
+        \vspace*{\fill}
+        \raggedright
+        \Large
+        \underline{SUBMITTED BY:} \\
+        \vspace*{0.2cm}
+        Name : SUDIPTA KUMAR DAS \\
+        ID   : 20-43658-2 \\
+        SEC  : J \\
+        DEPT. OF COMPUTER SCIENCE \\
+        \vspace*{\fill}
+
+        \vspace*{\fill}
+        \raggedleft
+        \Large
+        \underline{SUBMITTED TO:} \\
+        \vspace*{0.2cm}
+        DR. MD. TAIMUR AHAD \\
+        FACULTY
+        \vspace*{\fill}
+
+
+    \end{center}
+\end{titlepage}
+
+\tableofcontents
+% \newpage
+\listoffigures
+% \newpage
+\listoftables
+
+\newpage
+
+\section{Phong and Gouraud shading: The differences in  approach and method.}
+\subsection{Gouraud shading}
+A per-vertex color calculation is used in gouaud shading, also known as smooth
+shading. This implies that the fragment shader will get the color that the vertex
+shader assigns to each vertex as an out variable. This color is interpolated across
+the fragments to provide the smooth shading since it is supplied to the fragment
+shader as an invariant variable.
+\begin{figure}[htbp]
+    \begin{center}
+        \includegraphics*[width=8cm]{gourad.jpg}
+        \caption{Gouraud Shading}
+    \end{center}
+\end{figure}
+
+\subsection{Phong shading}
+A per-fragment color calculation is Phong shading. The fragment shader receives
+the normal and position information from the vertex shader as out variables.
+The color is subsequently calculated by the fragment shader using interpolation
+between these variables.
+
+\begin{figure}[htbp]
+    \begin{center}
+        \includegraphics*[width=8cm]{phong.jpg}
+        \caption{Phong Shading}
+    \end{center}
+\end{figure}
+
+\newpage
+
+\subsection{The differences in Phong and Gouraud shading}
+\begin{table}[htbp]
+    \begin{tabular}{|l|l|}
+        \hline
+        \multicolumn{1}{|c|}{Gouraud Shading}                                                                                                                                                      & \multicolumn{1}{c|}{Phong Shading}                                                                                                                                                                         \\ \hline
+        \begin{tabular}[c]{@{}l@{}}The Gourard shading method falls \\ somewhere in the middle of the two: \\ like Phong shading, each polygon has \\ a regular vector at each vertex\end{tabular} & \begin{tabular}[c]{@{}l@{}}Each vertex of a drawn polygon has a typical \\ vector, which is added to the surface to execute \\ shading and determine the color for each point \\ of interest.\end{tabular} \\ \hline
+        This kind of shading is not expensive                                                                                                                                                      & \begin{tabular}[c]{@{}l@{}}This kind of shading is more expensive than \\ Gouraud Shading\end{tabular}                                                                                                     \\ \hline
+        \begin{tabular}[c]{@{}l@{}}Takes a moderate amount of time and\\ processing.\end{tabular}                                                                                                  & \begin{tabular}[c]{@{}l@{}}It is slower and requires complex processing. \\ Its products are high caliber.\end{tabular}                                                                                    \\ \hline
+        Gleaming surfaces                                                                                                                                                                          & Surfaces with a polished finish.                                                                                                                                                                           \\ \hline
+        Each vertex uses the lighting equation                                                                                                                                                     & Each pixel makes use of the lighting equation.                                                                                                                                                             \\ \hline
+        \begin{tabular}[c]{@{}l@{}}Interpolates and computes illumination \\ at boundary verticies\end{tabular}                                                                                    & \begin{tabular}[c]{@{}l@{}}Every point on the surface of the polygon is \\ illuminated.\end{tabular}                                                                                                       \\ \hline
+        \begin{tabular}[c]{@{}l@{}}The methodology was initially described \\ in 1971 by Gouraud\end{tabular}                                                                                      & In 1973, Phong Shading published the method.                                                                                                                                                               \\ \hline
+        \begin{tabular}[c]{@{}l@{}}Henri Gouraud is the namesake of the \\ Gouraud shading style\end{tabular}                                                                                      & \begin{tabular}[c]{@{}l@{}}After Bui Tuong Phong, the Phong Shading \\ the model was created.\end{tabular}                                                                                                 \\ \hline
+    \end{tabular}
+    \centering
+    \caption{Gouraud Shading VS Phong Shading}
+\end{table}
+
+\subsection{Example of Gouraud and Phong shading}
+\begin{figure}[htbp]
+    \begin{center}
+        \includegraphics*[width=6.6cm]{SHADING.png}
+        \caption{Gouraud Shading VS Phong Shading}
+    \end{center}
+\end{figure}
+
+
+\end{document}
